@@ -29,7 +29,6 @@ function ScrollTop(props) {
     const anchor = (event.target.ownerDocument || document).querySelector(
       '#home'
     )
-    console.log(anchor)
 
     if (anchor) {
       anchor.scrollIntoView({

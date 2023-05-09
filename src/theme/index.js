@@ -4,6 +4,28 @@ const themeSettings = (mode) => {
       MuiCssBaseline: {
         styleOverrides: (theme) => ({
           body: {
+            '&::-webkit-scrollbar, & *::-webkit-scrollbar': {
+              width: '0.6rem',
+              borderRadius: '0.5rem',
+              backgroundColor:
+                theme.palette.mode === 'light'
+                  ? 'hsl(207, 4%, 75%)'
+                  : 'hsl(207, 4%, 15%)'
+            },
+            '&::-webkit-scrollbar-thumb, & *::-webkit-scrollbar-thumb': {
+              borderRadius: '0.5rem',
+              backgroundColor:
+                theme.palette.mode === 'light'
+                  ? 'hsl(207, 4%, 65%)'
+                  : 'hsl(207, 4%, 25%)',
+            },
+            '&::-webkit-scrollbar-thumb:hover, & *::-webkit-scrollbar-thumb:hover':
+              {
+                backgroundColor:
+                  theme.palette.mode === 'light'
+                    ? 'hsl(207, 4%, 55%)'
+                    : 'hsl(207, 4%, 35%)',
+              },
             transition: `background-color ${theme.transitions.duration.standard}ms ${theme.transitions.easing.easeInOut}`
           }
         })

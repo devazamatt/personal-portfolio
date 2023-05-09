@@ -2,13 +2,19 @@ import { styled } from '@mui/material/styles'
 import { AppBar, Box, Toolbar } from '@mui/material'
 
 export const StyledHeader = styled(AppBar)(({ theme }) => ({
-  background: theme.palette.background.default,
+  background:
+    theme.palette.mode === 'light'
+      ? theme.palette.background.default
+      : theme.palette.background.paper,
   top: 'initial',
   right: '1rem',
   bottom: '2rem',
   left: '1rem',
   width: 'initial',
-  boxShadow: '0 4px 20px hsla(207, 24%, 35%, 0.1)',
+  boxShadow:
+    theme.palette.mode === 'light'
+      ? '0 4px 20px hsla(207, 24%, 35%, 0.1)'
+      : '0 4px 20px hsla(207, 24%, 8%, 0.4)',
   borderRadius: '3rem',
   transition: `box-shadow ${theme.transitions.duration.standard}ms ${theme.transitions.easing.easeInOut}, background-color ${theme.transitions.duration.standard}ms ${theme.transitions.easing.easeInOut}`,
   [theme.breakpoints.up('md')]: {

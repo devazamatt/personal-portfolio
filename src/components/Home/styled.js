@@ -88,10 +88,15 @@ export const SocialsItem = styled(ListItem)(({ theme }) => ({
 }))
 
 export const SocialsLink = styled(IconButton)(({ theme }) => ({
-  color: theme.palette.primary.light,
+  color:
+    theme.palette.mode === 'light'
+      ? theme.palette.primary.light
+      : theme.palette.text.title,
   transition: `background-color ${theme.transitions.duration.standard}ms ${theme.transitions.easing.easeInOut}, color ${theme.transitions.duration.standard}ms ${theme.transitions.easing.easeInOut}`,
   '&:hover': {
-    color: theme.palette.text.title
+    color: theme.palette.mode === 'light'
+      ? theme.palette.text.title
+      : theme.palette.text.primary
   },
   [theme.breakpoints.up('md')]: {}
 }))
@@ -141,7 +146,6 @@ export const ExperienceTitle = styled(Typography)(({ theme }) => ({
   marginBottom: '1rem',
   [theme.breakpoints.up('md')]: {}
 }))
-
 
 export const ExperienceDesc = styled(Typography)(({ theme }) => ({
   fontFamily: 'Lora',

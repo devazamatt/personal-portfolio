@@ -7,7 +7,10 @@ export const StyledDrawer = styled(Drawer)(({ theme }) => ({
     backgroundColor: 'transparent'
   },
   '& .MuiDrawer-paper': {
-    background: theme.palette.background.default,
+    background:
+      theme.palette.mode === 'light'
+        ? theme.palette.background.default
+        : theme.palette.background.paper,
     boxShadow: '0 4px 20px hsla(207, 24%, 35%, 0.1)',
     borderRadius: '2rem',
     bottom: '2rem',

@@ -21,8 +21,8 @@ import {
 } from './styled'
 
 import ProfileImg from '../../assets/images/profile.png'
-import ShapeWavesImg from '../../assets/images/shape-waves.svg'
-import ShapeCircleImg from '../../assets/images/shape-circle.svg'
+import ShapeWavesSvg from '../../assets/images/shape-waves.svg'
+import ShapeCircleSvg from '../../assets/images/shape-circle.svg'
 
 import { Container, ListItem } from '@mui/material'
 import Grid from '@mui/material/Unstable_Grid2'
@@ -55,12 +55,12 @@ export const Home = () => {
 
                 <ShapeWaves
                   component="img"
-                  src={ShapeWavesImg}
+                  src={ShapeWavesSvg}
                   alt="Shape waves image"
                 />
                 <ShapeCircle
                   component="img"
-                  src={ShapeCircleImg}
+                  src={ShapeCircleSvg}
                   alt="Shape circle image"
                 />
               </HomeBlob>

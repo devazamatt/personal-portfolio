@@ -2,6 +2,7 @@ import { styled } from '@mui/material/styles'
 import { Box, Typography, Divider } from '@mui/material'
 
 export const StyledSection = styled(Box)(({ theme }) => ({
+  position: 'relative',
   paddingBlock: '2.5rem',
   [theme.breakpoints.up('lg')]: {
     paddingBlock: '8rem 0'
@@ -30,9 +31,9 @@ export const SectionText = styled(Box)(({ theme }) => ({
 }))
 
 export const SectionBorder = styled(Divider)(({ theme }) => ({
-  borderStyle: 'dashed',
-  borderColor: theme.palette.text.title,
-  borderBottomWidth: `2px`,
+  borderStyle: 'solid',
+  borderColor: theme.palette.mode === 'light' ? theme.palette.text.title : 'hsl(207, 4%, 32%)',
+  borderBottomWidth: theme.palette.mode === 'light' ? '2px' : '1px',
   paddingBottom: '3.5rem',
   [theme.breakpoints.up('lg')]: {
     paddingBottom: '6rem'

@@ -58,15 +58,3 @@ button {
   background-color: transparent;
   cursor: pointer;
 }
-
-::-webkit-scrollbar {
-  width: 0.6rem;
-  background-color: var(--scroll-bar-color);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--scroll-thumb-color);
-  &:hover {
-    background-color: var(--scroll-thumb-hover);
-  }
-}

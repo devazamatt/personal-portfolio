@@ -13,12 +13,12 @@ import NextJS from './images/techs/nextjs.svg'
 import Java from './images/techs/java.svg'
 import SpringBoot from './images/techs/springboot.svg'
 import PostgreSQL from './images/techs/postgresql.svg'
-import ShapeCircle from './images/shape-circle.svg'
+import ShapeCircleSVG from './images/shape-circle.svg'
 import Project1 from './images/project1.jpg'
 import Project2 from './images/project2.jpg'
 import Project3 from './images/project3.jpg'
 import Project4 from './images/project4.jpg'
-import ShapeWaves from './images/shape-waves.svg'
+import ShapeWavesSvg from './images/shape-waves.svg'
 import UZBFlag from './images/uzb-flag.png'
 
 export {
@@ -37,11 +37,11 @@ export {
   Java,
   SpringBoot,
   PostgreSQL,
-  ShapeCircle,
+  ShapeCircleSVG,
   Project1,
   Project2,
   Project3,
   Project4,
-  ShapeWaves,
+  ShapeWavesSvg,
   UZBFlag
 }
