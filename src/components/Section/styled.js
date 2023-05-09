@@ -1,5 +1,5 @@
 import { styled } from '@mui/material/styles'
-import {Box, Typography} from '@mui/material'
+import { Box, Typography, Divider } from '@mui/material'
 
 export const StyledSection = styled(Box)(({ theme }) => ({
   paddingBlock: '2.5rem',
@@ -22,4 +22,19 @@ export const SectionSubtitle = styled(Typography)(({ theme }) => ({
   color: theme.palette.text.secondary,
   marginBottom: '3rem',
   [theme.breakpoints.up('lg')]: {}
+}))
+
+export const SectionText = styled(Box)(({ theme }) => ({
+  textAlign: 'center',
+  [theme.breakpoints.up('lg')]: {}
+}))
+
+export const SectionBorder = styled(Divider)(({ theme }) => ({
+  borderStyle: 'dashed',
+  borderColor: theme.palette.text.title,
+  borderBottomWidth: `2px`,
+  paddingBottom: '3.5rem',
+  [theme.breakpoints.up('lg')]: {
+    paddingBottom: '6rem'
+  }
 }))
