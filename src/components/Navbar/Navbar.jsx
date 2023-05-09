@@ -1,17 +1,27 @@
-import { Link, List, ListItem } from '@mui/material'
-import { StyledNav } from './styled'
 import { links } from '../../constants'
+import { Nav, NavList, NavItem, NavLink } from './styled'
 
 export const Navbar = () => {
   return (
-    <StyledNav>
-      <List>
+    <Nav component="nav">
+      <NavList disablePadding>
         {links.map((link) => (
-          <ListItem key={link.key}>
-            <Link href={link.url}>{link.label}</Link>
-          </ListItem>
+          <NavItem key={link.key} disablePadding>
+            <NavLink
+              href={`#${link.url}`}
+              activeClass="active"
+              to={link.url}
+              spy={true}
+              smooth={true}
+              offset={-10}
+              duration={500}
+              delay={1000}
+            >
+              {link.label}
+            </NavLink>
+          </NavItem>
         ))}
-      </List>
-    </StyledNav>
+      </NavList>
+    </Nav>
   )
 }

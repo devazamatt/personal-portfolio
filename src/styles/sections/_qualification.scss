@@ -1,0 +1,39 @@
+.qualification {
+  position: relative;
+}
+
+.qualification__container {
+  row-gap: 3.5rem;
+}
+
+.qualification__title {
+  margin-bottom: 2rem;
+}
+
+.qualification__info {
+  row-gap: 2rem;
+}
+
+.qualification__name {
+  font-size: var(--normal-font-size);
+  margin-bottom: 1.25rem;
+}
+
+.qualification__country,
+.qualification__year {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+.qualification__country {
+  margin-bottom: 0.75rem;
+}
+
+.qualification__img {
+  position: absolute;
+  width: 150px;
+  right: -3rem;
+  bottom: 12rem;
+  transform: rotate(15deg);
+  opacity: 0.1;
+}

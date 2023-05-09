@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'Lora';
+  src: local('Lora'), local('Lora-Regular'),
+  url('/fonts/Lora/Lora-Regular.ttf') format('truetype'),
+  url('/fonts/Lora/Lora-Regular.woff') format('woff'),
+  url('/fonts/Lora/Lora-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: local('Lora'), local('Lora-Medium'),
+  url('/fonts/Lora/Lora-Medium.ttf') format('truetype'),
+  url('/fonts/Lora/Lora-Medium.woff') format('woff'),
+  url('/fonts/Lora/Lora-Medium.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: local('Lora'), local('Lora-SemiBold'),
+  url('/fonts/Lora/Lora-SemiBold.ttf') format('truetype'),
+  url('/fonts/Lora/Lora-SemiBold.woff') format('woff'),
+  url('/fonts/Lora/Lora-SemiBold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), local('Roboto-Regular'),
+  url('/fonts/Roboto/Roboto-Regular.ttf') format('truetype'),
+  url('/fonts/Roboto/Roboto-Regular.woff') format('woff'),
+  url('/fonts/Roboto/Roboto-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), local('Roboto-Medium'),
+  url('/fonts/Roboto/Roboto-Medium.ttf') format('truetype'),
+  url('/fonts/Roboto/Roboto-Medium.woff') format('woff'),
+  url('/fonts/Roboto/Roboto-Medium.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}

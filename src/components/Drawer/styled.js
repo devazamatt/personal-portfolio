@@ -1,14 +1,15 @@
 import { styled } from '@mui/material/styles'
-import { Box, Drawer, Link, List, ListItem } from '@mui/material'
+import {Box, Drawer, IconButton, List, ListItem} from '@mui/material'
+import { Link } from 'react-scroll'
 
 export const StyledDrawer = styled(Drawer)(({ theme }) => ({
   '& .MuiModal-backdrop': {
     backgroundColor: 'transparent'
   },
   '& .MuiDrawer-paper': {
-    backgroundColor: theme.palette.background.default,
+    background: theme.palette.background.default,
     boxShadow: '0 4px 20px hsla(207, 24%, 35%, 0.1)',
-    borderRadius: '1.8rem',
+    borderRadius: '2rem',
     bottom: '2rem',
     right: '1rem',
     left: '1rem'
@@ -52,5 +53,15 @@ export const StyledLink = styled(Link)(({ theme }) => ({
   '& i': {
     fontSize: '1.25rem'
   },
+  '&.active': {
+    color: theme.palette.text.title
+  },
+  [theme.breakpoints.up('md')]: {}
+}))
+
+export const CloseDrawer = styled(IconButton)(({ theme }) => ({
+  position: 'absolute',
+  right: '1.5rem',
+  bottom: '0.7rem',
   [theme.breakpoints.up('md')]: {}
 }))

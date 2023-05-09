@@ -1,0 +1,62 @@
+:root {
+  --header-height: 3.5rem;
+
+  /* ========== Colors ========== */
+  /* Change favorite color */
+  --hue-color: 207; /* Purple 250 - Green 142 - Blue 230 - Pink 340 */
+
+  /* Color mode HSL(hue, saturation, lightness) */
+  --first-color: hsl(var(--hue-color), 65%, 65%);
+  --title-color: hsl(var(--hue-color), 4%, 16%);
+  --text-color: hsl(var(--hue-color), 4%, 28%);
+  --text-color-light: hsl(var(--hue-color), 4%, 56%);
+  --body-color: hsl(var(--hue-color), 4%, 99%);
+  --container-color: hsl(var(--hue-color), 4%, 95%);
+  --scroll-bar-color: hsl(var(--hue-color), 4%, 75%);
+  --scroll-thumb-color: hsl(var(--hue-color), 4%, 55%);
+  --scroll-thumb-hover: hsl(var(--hue-color), 4%, 35%);
+
+  /* Change the first number */
+  /* Blue: 207 - Purple: 250 - Pink: 356 - Teal: 174 */
+  --gradient-color: linear-gradient(
+    180deg,
+    hsla(207, 48%, 72%, 0),
+    hsla(207, 65%, 65%, 1)
+  );
+
+  /* ========== Font and typography ========== */
+  /* 0.5rem = 8px | 1rem = 16px ... */
+  --body-font: 'Roboto', sans-serif;
+  --title-font: 'Lora', serif;
+  --biggest-font-size: 1.5rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+  --tiny-font-size: 0.625rem;
+
+  /* ========== Font weight ========== */
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /* ========== z index ========== */
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 1024px) {
+  :root {
+    --biggest-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+    --tiny-font-size: 0.688rem;
+  }
+}

@@ -2,17 +2,11 @@ const themeSettings = (mode) => {
   return {
     components: {
       MuiCssBaseline: {
-        styleOverrides: {
+        styleOverrides: (theme) => ({
           body: {
-            transition: 'background .4s'
+            transition: `background-color ${theme.transitions.duration.standard}ms ${theme.transitions.easing.easeInOut}`
           }
-        }
-      },
-      MuiAppBar: {
-        defaultProps: {
-            color: 'transparent',
-          elevation: 0
-        }
+        })
       },
       MuiLink: {
         defaultProps: {
