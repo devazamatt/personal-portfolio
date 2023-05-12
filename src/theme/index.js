@@ -17,23 +17,18 @@ const themeSettings = (mode) => {
               backgroundColor:
                 theme.palette.mode === 'light'
                   ? 'hsl(207, 4%, 65%)'
-                  : 'hsl(207, 4%, 25%)',
+                  : 'hsl(207, 4%, 25%)'
             },
             '&::-webkit-scrollbar-thumb:hover, & *::-webkit-scrollbar-thumb:hover':
               {
                 backgroundColor:
                   theme.palette.mode === 'light'
                     ? 'hsl(207, 4%, 55%)'
-                    : 'hsl(207, 4%, 35%)',
+                    : 'hsl(207, 4%, 35%)'
               },
-            transition: `background-color ${theme.transitions.duration.standard}ms ${theme.transitions.easing.easeInOut}`
+            transition: `background-color 0.4s`
           }
         })
-      },
-      MuiLink: {
-        defaultProps: {
-          underline: 'none'
-        }
       }
     },
     palette: {
@@ -71,37 +66,9 @@ const themeSettings = (mode) => {
           })
     },
     typography: {
-      h1: {
-        fontFamily: ['Lora', 'serif'].join(','),
-        fontWeight: 500,
-        fontSize: '1.5rem',
-        lineHeight: 'initial',
-        letterSpacing: 'initial'
-      },
-      h2: {
-        fontFamily: ['Lora', 'serif'].join(','),
-        fontWeight: 500,
-        fontSize: '1.25rem',
-        lineHeight: 'initial',
-        letterSpacing: 'initial'
-      },
-      h3: {
-        fontFamily: ['Lora', 'serif'].join(','),
-        fontWeight: 500,
-        fontSize: '1rem',
-        lineHeight: 'initial',
-        letterSpacing: 'initial'
-      },
       body1: {
         fontFamily: ['Roboto', 'sans-serif'].join(','),
         fontWeight: 400,
-        fontSize: '0.938rem',
-        lineHeight: '1.5',
-        letterSpacing: 'initial'
-      },
-      body2: {
-        fontFamily: ['Lora', 'serif'].join(','),
-        fontWeight: 500,
         fontSize: '0.938rem',
         lineHeight: 'initial',
         letterSpacing: 'initial'

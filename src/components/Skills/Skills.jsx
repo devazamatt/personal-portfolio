@@ -1,40 +1,60 @@
-import { technologies } from './constants'
-import { Section } from '../Section'
-import { Container } from '@mui/material'
-import { SectionBorder } from '../Section/styled'
+import { backs, fronts } from '../../constants'
 
 export const Skills = () => {
   return (
-    <Section id="skills">
-      <Container>
-        <div className="section__text">
-          <h2 className="section__title">Skills</h2>
-          <p className="section__subtitle">My favourite skills</p>
-        </div>
+    <section className="skills section" id="skills">
+      <div className="section__text">
+        <h2 className="section__title">Skills</h2>
+        <p className="section__subtitle">My favourite skills</p>
+      </div>
 
-        <div className="skills__container grid">
-          {technologies.map((technology) => (
-            <div className="skills__content" key={technology.key}>
-              <h3 className="skills__title">
-                <i className={technology.icon}></i> {technology.title}
-              </h3>
-
-              <div className="skills__info">
-                {technology.skills.map((skill) => (
-                  <div className="skills__data" key={skill.name}>
-                    <div className="skills__blob">
-                      <img src={skill.icon} alt={skill.name} />
-                    </div>
-                    <h3 className="skills__name">{skill.name}</h3>
-                    <p className="skills__level">{skill.level}</p>
+      <div className="container">
+        <div className="skills__grid section__border">
+          <div className="skills__content">
+            <h3 className="skills__title">
+              <i className="ri-braces-line"></i>
+              Frontend Development
+            </h3>
+            <div className="skills__info">
+              {fronts.map((front) => (
+                <div className="skills__data" key={front.name}>
+                  <div className="skills__blob">
+                    <img
+                      className="skills__blob-img"
+                      src={front.icon}
+                      alt={front.name}
+                    />
                   </div>
-                ))}
-              </div>
+                  <h3 className="skills__name">{front.name}</h3>
+                  <p className="skills__level">{front.level}</p>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          <div className="skills__content">
+            <h3 className="skills__title">
+              <i className="ri-database-2-line"></i>
+              Backend Development
+            </h3>
+            <div className="skills__info">
+              {backs.map((back) => (
+                <div className="skills__data" key={back.name}>
+                  <div className="skills__blob">
+                    <img
+                      className="skills__blob-img"
+                      src={back.icon}
+                      alt={back.name}
+                    />
+                  </div>
+                  <h3 className="skills__name">{back.name}</h3>
+                  <p className="skills__level">{back.level}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-        <SectionBorder />
-      </Container>
-    </Section>
+      </div>
+    </section>
   )
 }

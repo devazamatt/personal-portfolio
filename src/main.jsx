@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client'
 import 'remixicon/fonts/remixicon.css'
-import './styles/main.scss'
+import './assets/styles/main.scss'
 import { App } from './App'
 import { Provider } from 'react-redux'
 import { store } from './store'

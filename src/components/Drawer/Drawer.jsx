@@ -1,15 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { toggleDrawer } from '../../store/slices/drawerSlice'
-import {
-  CloseDrawer,
-  StyledDrawer,
-  StyledLink,
-  StyledList,
-  StyledListItem,
-  StyledNav
-} from './styled'
+import { StyledDrawer } from './styled'
 import { links } from '../../constants'
-import CloseIcon from '@mui/icons-material/Close'
+import { Link } from 'react-scroll'
 
 export const Drawer = () => {
   const { isOpen } = useSelector((state) => state.drawer)
@@ -21,12 +14,12 @@ export const Drawer = () => {
       open={isOpen}
       onClose={() => dispatch(toggleDrawer(false))}
     >
-      <StyledNav component="nav">
-        <StyledList>
+      <nav className="nav-drawer">
+        <ul className="nav-drawer__list">
           {links.map((link) => (
-            <StyledListItem key={link.key}>
-              <StyledLink
-                className="nav__link"
+            <li className="nav-drawer__item" key={link.key}>
+              <Link
+                className="nav-drawer__link"
                 href={`#${link.url}`}
                 onClick={() => dispatch(toggleDrawer(false))}
                 activeClass="active"
@@ -38,14 +31,18 @@ export const Drawer = () => {
                 delay={1000}
               >
                 {link.icon} {link.label}
-              </StyledLink>
-            </StyledListItem>
+              </Link>
+            </li>
           ))}
-        </StyledList>
-        <CloseDrawer onClick={() => dispatch(toggleDrawer(false))}>
-          <CloseIcon />
-        </CloseDrawer>
-      </StyledNav>
+        </ul>
+        <button
+          className="close-drawer"
+          onClick={() => dispatch(toggleDrawer(false))}
+          type="button"
+        >
+          <i className="ri-close-line"></i>
+        </button>
+      </nav>
     </StyledDrawer>
   )
 }

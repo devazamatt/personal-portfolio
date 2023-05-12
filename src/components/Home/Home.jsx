@@ -1,172 +1,100 @@
-import { Section } from '../Section'
-
-import { SectionBorder } from '../Section/styled'
-import {
-  HomeTitle,
-  HomeBlob,
-  HomeProfile,
-  HomeImage,
-  ShapeCircle,
-  ShapeWaves,
-  Socials,
-  SocialsItem,
-  SocialsLink,
-  BioDescription,
-  BioTitle,
-  ContactLink,
-  ContactList,
-  ServiceDescription,
-  ExperienceDesc,
-  ExperienceTitle
-} from './styled'
-
 import ProfileImg from '../../assets/images/profile.png'
-import ShapeWavesSvg from '../../assets/images/shape-waves.svg'
-import ShapeCircleSvg from '../../assets/images/shape-circle.svg'
-
-import { Container, ListItem } from '@mui/material'
-import Grid from '@mui/material/Unstable_Grid2'
-import GitHubIcon from '@mui/icons-material/GitHub'
-import TelegramIcon from '@mui/icons-material/Telegram'
-import InstagramIcon from '@mui/icons-material/Instagram'
+import { ShapeCircleSVG, ShapeWavesSvg } from '../../assets'
 
 export const Home = () => {
   return (
-    <Section id="home">
-      <Container>
-        <Grid container spacing={2}>
-          <Grid container xs={12}>
-            <Grid xs={12}>
-              <HomeTitle variant="h1" component="h1">
-                Hi, I'm Azamat <br /> Frontend Developer <br /> Based in
-                Tashkent
-              </HomeTitle>
-            </Grid>
+    <section className="home section" id="home">
+      <div className="container">
+        <div className="home__grid section__border">
+          <div className="home__data grid">
+            <h1 className="home__title">
+              Hi, I'm Azamat <br /> Frontend Developer <br /> Based in Tashkent
+            </h1>
 
-            <Grid xs={12}>
-              <HomeBlob>
-                <HomeProfile>
-                  <HomeImage
-                    component="img"
-                    src={ProfileImg}
-                    alt="Profile image"
-                  />
-                </HomeProfile>
+            <div className="home__blob grid">
+              <div className="home__perfil">
+                <img src={ProfileImg} alt="" />
+              </div>
 
-                <ShapeWaves
-                  component="img"
-                  src={ShapeWavesSvg}
-                  alt="Shape waves image"
-                />
-                <ShapeCircle
-                  component="img"
-                  src={ShapeCircleSvg}
-                  alt="Shape circle image"
-                />
-              </HomeBlob>
-            </Grid>
+              <img
+                className="home__shape-waves"
+                src={ShapeWavesSvg}
+                alt="Shape waves image"
+              />
+              <img
+                className="home__shape-circle"
+                src={ShapeCircleSVG}
+                alt="Shape circle image"
+              />
+            </div>
 
-            <Grid xs={12}>
-              <Socials>
-                <SocialsItem disablePadding>
-                  <SocialsLink
-                    href="https://github.com/devazamatt"
-                    target="_blank"
-                  >
-                    <GitHubIcon fontSize="small" />
-                  </SocialsLink>
-                </SocialsItem>
+            <ul className="home__social">
+              <a
+                className="home__social-link"
+                href="https://github.com/azamatjohnson"
+                target="_blank"
+              >
+                <i className="ri-github-line"></i>
+              </a>
+              <a
+                className="home__social-link"
+                href="https://t.me/azamatjohnson"
+                target="_blank"
+              >
+                <i className="ri-telegram-line"></i>
+              </a>
+              <a
+                className="home__social-link"
+                href="https://www.instagram.com/azamatjohnson"
+                target="_blank"
+              >
+                <i className="ri-instagram-line"></i>
+              </a>
+            </ul>
+          </div>
 
-                <SocialsItem>
-                  <SocialsLink href="https://t.me/devazamat" target="_blank">
-                    <TelegramIcon fontSize="small" />
-                  </SocialsLink>
-                </SocialsItem>
-
-                <SocialsItem disablePadding>
-                  <SocialsLink
-                    href="https://www.instagram.com/devazamat/"
-                    target="_blank"
-                  >
-                    <InstagramIcon fontSize="small" />
-                  </SocialsLink>
-                </SocialsItem>
-              </Socials>
-            </Grid>
-          </Grid>
-
-          <Grid container xs={12}>
-            <Grid xs={12}>
-              <BioTitle component="h3">BIOGRAPHY</BioTitle>
-              <BioDescription>
+          <div className="home__info">
+            <div>
+              <h3 className="home__info-title">BIOGRAPHY</h3>
+              <p className="home__info-description">
                 Hi, I'm Azamat, Frontend Developer. Passionate about designing
                 beautiful web interfaces. Based in Tashkent.
-              </BioDescription>
-            </Grid>
+              </p>
+            </div>
+            <div>
+              <h3 className="home__info-title">CONTACT</h3>
+              <p className="home__info-description">
+                Uzbekistan, Tashkent <br />
+                azamatjohnson@gmail.com <br />
+                +998 (95) 004-40-48 <br />
+              </p>
+            </div>
+            <div>
+              <h3 className="home__info-title">SERVICES</h3>
+              <p className="home__info-description">
+                Frontend Development <br />
+                Backend Development <br />
+                Mobile Development <br />
+              </p>
+            </div>
+          </div>
 
-            <Grid xs={12}>
-              <BioTitle component="h3">CONTACT</BioTitle>
-              <ContactList disablePadding>
-                <ListItem disablePadding>
-                  <ContactLink
-                    href="https://goo.gl/maps/GHR3EqwSebhxwZmL7"
-                    target="_blank"
-                  >
-                    Uzbekistan, Tashkent
-                  </ContactLink>
-                </ListItem>
-
-                <ListItem disablePadding>
-                  <ContactLink href="mailto:devazamatkhabibullaev@gmail.com">
-                    devazamatkhabibullaev@gmail.com
-                  </ContactLink>
-                </ListItem>
-
-                <ListItem disablePadding>
-                  <ContactLink href="tel:998950044048">
-                    +998 (95) 004-40-48
-                  </ContactLink>
-                </ListItem>
-              </ContactList>
-            </Grid>
-
-            <Grid xs={12}>
-              <BioTitle component="h3">SERVICES</BioTitle>
-              <ServiceDescription>Frontend Development</ServiceDescription>
-              <ServiceDescription>Backend Development</ServiceDescription>
-              <ServiceDescription>Mobile Development</ServiceDescription>
-            </Grid>
-          </Grid>
-
-          <Grid container xs={12}>
-            <Grid xs={12}>
-              <ExperienceTitle variant="h3" component="h3">
-                Years of experience
-              </ExperienceTitle>
-
-              <ExperienceDesc>01+</ExperienceDesc>
-            </Grid>
-
-            <Grid xs={12}>
-              <ExperienceTitle variant="h3" component="h3">
-                Completed projects
-              </ExperienceTitle>
-
-              <ExperienceDesc>02+</ExperienceDesc>
-            </Grid>
-
-            <Grid xs={12}>
-              <ExperienceTitle variant="h3" component="h3">
-                Companies worked
-              </ExperienceTitle>
-
-              <ExperienceDesc>02+</ExperienceDesc>
-            </Grid>
-          </Grid>
-        </Grid>
-
-        <SectionBorder />
-      </Container>
-    </Section>
+          <div className="home__info">
+            <div>
+              <h3 className="home__info-title">YEARS OF EXPERIENCE</h3>
+              <p className="home__info-number">01+</p>
+            </div>
+            <div>
+              <h3 className="home__info-title">COMPLETED PROJECTS</h3>
+              <p className="home__info-number">02+</p>
+            </div>
+            <div>
+              <h3 className="home__info-title">COMPANIES WORKED</h3>
+              <p className="home__info-number">01+</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   )
 }

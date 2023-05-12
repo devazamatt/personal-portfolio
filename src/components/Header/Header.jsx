@@ -2,12 +2,9 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { toggleDrawer } from '../../store/slices/drawerSlice'
 import { setMode } from '../../store/slices/themeSlice'
-import { Navbar } from '../Navbar'
-import { Container, IconButton, Stack, useTheme } from '@mui/material'
-import { StyledHeader, StyledLogo, StyledToolbar } from './styled'
-import MoonIcon from '@mui/icons-material/DarkMode'
-import SunIcon from '@mui/icons-material/WbSunny'
-import MenuIcon from '@mui/icons-material/Menu'
+import { useTheme } from '@mui/material'
+import { links } from '../../constants'
+import { Link } from 'react-scroll'
 
 export const Header = () => {
   const mode = useSelector((state) => state.theme)
@@ -24,30 +21,59 @@ export const Header = () => {
   }
 
   return (
-    <StyledHeader color="inherit">
-      <Container maxWidth="lg">
-        <StyledToolbar>
-          <Stack direction="row" justifyContent="space-between" flex={1}>
-            <StyledLogo component="a" href="#home">
+    <header className="header">
+      <div className="container">
+        <div className="header__toolbar">
+          <div className="header__left">
+            <a className="logo" href="#">
               Azamat.
-            </StyledLogo>
-            <Navbar />
-          </Stack>
+            </a>
 
-          <Stack direction="row" spacing={1}>
-            <IconButton onClick={handleChange} color="inherit">
-              {theme.palette.mode === 'dark' ? <SunIcon /> : <MoonIcon />}
-            </IconButton>
-            <IconButton
-              onClick={() => dispatch(toggleDrawer(true))}
-              color="inherit"
-              sx={{ display: { md: 'none' } }}
+            <nav className="nav">
+              <ul className="nav__list">
+                {links.map((link) => (
+                  <li className="nav__item" key={link.key}>
+                    <Link
+                      className="nav__link"
+                      href={`#${link.url}`}
+                      activeClass="active"
+                      to={link.url}
+                      spy={true}
+                      smooth={true}
+                      offset={-10}
+                      duration={500}
+                      delay={1000}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+
+          <div className="header__right">
+            <button
+              className="change-theme"
+              onClick={handleChange}
+              type="button"
             >
-              <MenuIcon />
-            </IconButton>
-          </Stack>
-        </StyledToolbar>
-      </Container>
-    </StyledHeader>
+              {theme.palette.mode === 'dark' ? (
+                <i className="ri-sun-line"></i>
+              ) : (
+                <i className="ri-moon-line"></i>
+              )}
+            </button>
+            <button
+              className="open-drawer"
+              onClick={() => dispatch(toggleDrawer(true))}
+              type="button"
+            >
+              <i className="ri-menu-line"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
   )
 }

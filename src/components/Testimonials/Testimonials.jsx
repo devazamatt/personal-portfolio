@@ -1,26 +1,22 @@
 import { useRef } from 'react'
 import { Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { testimonials } from './constants'
+import { testimonials } from '../../constants'
 import { ShapeWavesSvg } from '../../assets'
-import { ShapeCircle } from './styled'
-import { Section } from '../Section'
-import { Container } from '@mui/material'
-import { SectionBorder } from '../Section/styled'
 
 export const Testimonials = () => {
   const navigationPrevRef = useRef(null)
   const navigationNextRef = useRef(null)
 
   return (
-    <Section id="testimonials">
-      <Container>
-        <div className="section__text">
-          <h2 className="section__title">Testimonials</h2>
-          <p className="section__subtitle">My client saying</p>
-        </div>
+    <section className="testimonials section" id="testimonials">
+      <div className="section__text">
+        <h2 className="section__title">Testimonials</h2>
+        <p className="section__subtitle">My client saying</p>
+      </div>
 
-        <div className="testimonials__container">
+      <div className="container">
+        <div className="testimonials__box section__border">
           <Swiper
             grabCursor={true}
             modules={[Navigation]}
@@ -64,10 +60,9 @@ export const Testimonials = () => {
             <i className="ri-arrow-right-s-line"></i>
           </div>
         </div>
+      </div>
 
-        <ShapeCircle src={ShapeWavesSvg} alt="Shape waves" component="img" />
-        <SectionBorder />
-      </Container>
-    </Section>
+      <img className="testimonials__img" src={ShapeWavesSvg} alt="Shape waves" />
+    </section>
   )
 }

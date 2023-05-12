@@ -1,17 +1,13 @@
-import { Container } from '@mui/material'
-import { SectionBorder } from '../Section/styled'
-import { Section } from '../Section'
-
 export const Services = () => {
   return (
-    <Section id="services">
-      <Container>
-        <div className="section__text">
-          <h2 className="section__title">Services</h2>
-          <p className="section__subtitle">What I offer</p>
-        </div>
+    <section className="services section" id="services">
+      <div className="section__text">
+        <h2 className="section__title">Services</h2>
+        <p className="section__subtitle">What I offer</p>
+      </div>
 
-        <div className="services__container grid">
+      <div className="container">
+        <div className="services__grid section__border">
           <div className="services__card">
             <i className="ri-braces-line"></i>
 
@@ -57,8 +53,7 @@ export const Services = () => {
             <div className="services__border"></div>
           </div>
         </div>
-        <SectionBorder />
-      </Container>
-    </Section>
+      </div>
+    </section>
   )
 }

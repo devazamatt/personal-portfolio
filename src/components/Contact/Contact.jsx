@@ -1,17 +1,13 @@
-import { Section } from '../Section'
-import { SectionBorder } from '../Section/styled'
-import { Container } from '@mui/material'
-
 export const Contact = () => {
   return (
-    <Section id="contact">
-      <Container>
-        <div className="section__text">
-          <h2 className="section__title">Contact Me</h2>
-          <p className="section__subtitle">Get in touch</p>
-        </div>
+    <section className="contact section" id="contact">
+      <div className="section__text">
+        <h2 className="section__title">Contact Me</h2>
+        <p className="section__subtitle">Get in touch</p>
+      </div>
 
-        <div className="contact__container grid">
+      <div className="container">
+        <div className="contact__grid section__border">
           <div className="contact__content">
             <h3 className="contact__title">
               <i className="ri-chat-3-line"></i> Talk to me
@@ -19,14 +15,12 @@ export const Contact = () => {
 
             <div className="contact__info">
               <div className="contact__data">
-                <span className="contact__data-title">Email</span>
-                <span className="contact__data-info">
-                  devazamatkhabibullaev@gmail.com
-                </span>
+                <h3 className="contact__data-title">Email</h3>
+                <p className="contact__data-info">azamatjohnson@gmail.com</p>
 
                 <a
                   className="contact__link"
-                  href="mailto:devazamatkhabibullaev@gmail.com"
+                  href="mailto:azamatjohnson@gmail.com"
                   target="_blank"
                 >
                   Write me <i className="ri-arrow-right-line"></i>
@@ -34,12 +28,12 @@ export const Contact = () => {
               </div>
 
               <div className="contact__data">
-                <span className="contact__data-title">Telegram</span>
-                <span className="contact__data-info">+998 (95) 004-40-48</span>
+                <h3 className="contact__data-title">Telegram</h3>
+                <p className="contact__data-info">+998 (95) 004-40-48</p>
 
                 <a
                   className="contact__link"
-                  href="https://t.me/azamatkhabibullaev"
+                  href="https://t.me/azamatjohnson"
                   target="_blank"
                 >
                   Write me <i className="ri-arrow-right-line"></i>
@@ -47,8 +41,8 @@ export const Contact = () => {
               </div>
 
               <div className="contact__data">
-                <span className="contact__data-title">Instagram</span>
-                <span className="contact__data-info">@devazamat</span>
+                <h3 className="contact__data-title">Instagram</h3>
+                <p className="contact__data-info">@azamatjohnson</p>
 
                 <a
                   className="contact__link"
@@ -113,8 +107,7 @@ export const Contact = () => {
             </form>
           </div>
         </div>
-        <SectionBorder />
-      </Container>
-    </Section>
+      </div>
+    </section>
   )
 }
