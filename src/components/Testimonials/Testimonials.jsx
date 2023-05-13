@@ -15,8 +15,8 @@ export const Testimonials = () => {
         <p className="section__subtitle">My client saying</p>
       </div>
 
-      <div className="container">
-        <div className="testimonials__box section__border">
+      <div className="container section__border">
+        <div className="testimonials__box">
           <Swiper
             grabCursor={true}
             modules={[Navigation]}

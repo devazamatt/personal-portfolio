@@ -13,12 +13,14 @@ export const StyledDrawer = styled(Drawer)(({ theme }) => ({
         : '0 4px 20px hsla(207, 24%, 8%, 0.4)',
     borderRadius: '2rem',
     bottom: '2rem',
-    right: '1.5rem',
-    left: '1.5rem',
+    right: '1rem',
+    left: '1rem',
     [theme.breakpoints.up('sm')]: {
-      width: '400px',
-      margin: '0 auto'
-    },
+      width: '380px',
+      margin: '0 auto',
+      right: '0',
+      left: '0'
+    }
   },
   [theme.breakpoints.up('md')]: {
     display: 'none'

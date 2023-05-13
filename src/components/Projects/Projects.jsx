@@ -14,8 +14,8 @@ export const Projects = () => {
         <p className="section__subtitle">Most recent works</p>
       </div>
 
-      <div className="container">
-        <div className="projects__box section__border">
+      <div className="container section__border">
+        <div className="projects__box">
           <Swiper
             modules={[Navigation, Pagination]}
             slidesPerView={1}

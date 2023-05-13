@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { toggleDrawer } from '../../store/slices/drawerSlice'
 import { setMode } from '../../store/slices/themeSlice'
@@ -7,6 +7,7 @@ import { links } from '../../constants'
 import { Link } from 'react-scroll'
 
 export const Header = () => {
+  const [top, setTop] = useState(false)
   const mode = useSelector((state) => state.theme)
   const dispatch = useDispatch()
   const theme = useTheme()
@@ -15,13 +16,21 @@ export const Header = () => {
     localStorage.setItem('theme', mode)
   }, [mode])
 
+  useEffect(() => {
+    const scrollHandler = () => {
+      window.pageYOffset >= 50 ? setTop(true) : setTop(false)
+    }
+    window.addEventListener('scroll', scrollHandler)
+    return () => window.removeEventListener('scroll', scrollHandler)
+  }, [top])
+
   const handleChange = () => {
     const next = mode === 'dark' ? 'light' : 'dark'
     dispatch(setMode(next))
   }
 
   return (
-    <header className="header">
+    <header className={`${top ? 'header shadow' : 'header'}`}>
       <div className="container">
         <div className="header__toolbar">
           <div className="header__left">

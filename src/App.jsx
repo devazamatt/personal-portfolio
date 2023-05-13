@@ -19,7 +19,6 @@ import { ScrollToTop } from './components/ScrollToTop'
 export const App = () => {
   const mode = useSelector((state) => state.theme)
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode])
-
   useEffect(() => {
     document.body.className = mode === 'dark' ? 'dark' : 'light'
   }, [mode])

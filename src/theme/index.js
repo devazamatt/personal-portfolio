@@ -1,5 +1,14 @@
 const themeSettings = (mode) => {
   return {
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 576,
+        md: 900,
+        lg: 1200,
+        xl: 1536
+      },
+    },
     components: {
       MuiCssBaseline: {
         styleOverrides: (theme) => ({
